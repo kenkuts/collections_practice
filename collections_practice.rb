@@ -47,11 +47,7 @@ def sum_array(a)
 end
 
 def add_s(a)
-    a.map! do |word|
-        if a[1] == word
-            a
-        else
-            word += 's'
-        end
+    a.each_with_index.map do |element, index| 
+        index == 1 ? element: element += 's'
     end
 end
